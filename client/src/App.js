@@ -17,7 +17,7 @@ class App extends Component {
     this.getData();
   }
   getData = async () => {
-    const resp = await axios.get(`${url}`)
+    const resp = await axios.get(`${URL}`)
     console.log(resp);
     this.setState({
       posts: resp.data,
@@ -26,7 +26,7 @@ class App extends Component {
   }
   deletePost = async e => {
     let id = e.target.id;
-    await axios.delete(`${url}/posts/${id}`);
+    await axios.delete(`${URL}/posts/${id}`);
     this.getData();
   }
   render() {
