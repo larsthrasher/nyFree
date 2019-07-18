@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
+import MainFeed from "./components/MainFeed.js";
+import Header from "./components/Header.js"
+import Footer from "./components/Footer.js"
+
 
 const URL = "http://localhost:3000";
 
@@ -41,6 +45,9 @@ class App extends Component {
     } = this.state;
     return (
       <div>
+        <Header onNewPostCreated={this.getData}/>
+        <MainFeed className="mainFeed" posts={posts} apiLoaded={apiLoaded} deletePost={this.deletePost}/>
+        <Footer/>
       </div>
     )
   }
