@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import axios from "axios";
 import "../App.css";
 
 
@@ -13,7 +12,7 @@ class MainFeed extends Component {
       return (
             <div className="post" key={post.id}>
                 <h2 className="title">{post.title}</h2>
-                <img alt={`Something for donation ${post.id}`} className="image" src={post.image} width="100%"/>
+                <img alt={`Something for donation ${post.id}`} className="image" src={post.image} width="25%"/>
                 <p className="description">{post.description}</p>
                 <a href="#" className="contact">{post.contact}</a>
                 <br/>
