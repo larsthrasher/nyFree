@@ -17,6 +17,10 @@
     font-size:3.25em;
   }
 
+  span{
+    display:none;
+  }
+
   h2{
     color: darkgrey;
     font-family: Shrikhand;
@@ -124,18 +128,63 @@
     color: black;
     text-decoration: none;
     cursor: pointer;
-}
+  }
 }
 
 /* Tablet Styles */
-@media only screen and (min-width: 500px) and (max-width: 960px) {
-  body {
-    background-color: #F5CF8E; /* Yellow */
+@media only screen and (min-width: 500px) and (max-width: 1000px) {
+  .header{
+    background-image:linear-gradient(to bottom right, darkgreen, #0EE67D);
+    height:20vh;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1{
+    color: white;
+    font-family: Shrikhand;
+    font-size:4em;
+  }
+
+  span{
+    color: white;
+    font-family: Shrikhand;
+    font-size:.25em;
+  }
+
+  input{
+    text-align:center;
+    border-radius: 3%;
+  }
+  ::placeholder{
+    color: darkgreen;
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  .submit{
+    color: white;
+    font-size: 1em;
+    border-radius:0;
+    font-family: Shrikhand;
+  }
+
+  .titulo{
+    line-height:185%;
   }
 }
 
 /* Desktop Styles */
-@media only screen and (min-width: 961px) {
+@media only screen and (min-width: 1000px) {
   body {
     background-color: #B2D6FF; /* Blue */
   }
