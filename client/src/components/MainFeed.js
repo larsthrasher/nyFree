@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../App.css";
+import EditModal from "./EditModal.js"
 
 
 class MainFeed extends Component {
@@ -18,7 +19,7 @@ class MainFeed extends Component {
                 <br/>
                 <div>
                   <button className="delete" id={post.id} onClick={this.props.deletePost}>delete</button>
-                  <button className="edit" id={post.id}>edit</button>
+                  <button className="edit" id={post.id} onClick={this.props.showModal}>edit</button>
                 </div>
             </div>
       );
@@ -26,9 +27,11 @@ class MainFeed extends Component {
   }
 
   render() {
+
     return (
       <div className="mainFeed">
         {this.props.apiLoaded ? this.mainFeed() : <p>Loading...</p>}
+        {this.props.modal ? <EditModal closeModal={this.props.closeModal}/> : null}
       </div>
     );
   }

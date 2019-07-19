@@ -6,6 +6,7 @@ import Header from "./components/Header.js"
 import Footer from "./components/Footer.js"
 
 
+
 const URL = "http://localhost:3000";
 
 class App extends Component {
@@ -33,6 +34,15 @@ class App extends Component {
     await axios.delete(`${URL}/posts/${id}`);
     this.getData();
   }
+
+  showModal = () => {
+    this.setState({modal:true})
+  }
+
+  closeModal = () =>{
+    this.setState({modal:false})
+  }
+
   render() {
     const {
       posts,
@@ -46,12 +56,14 @@ class App extends Component {
     return (
       <div>
         <Header onNewPostCreated={this.getData}/>
-        <br/>
         <MainFeed
           className="mainFeed"
           posts={posts}
           apiLoaded={apiLoaded}
           deletePost={this.deletePost}
+          showModal={this.showModal}
+          closeModal={this.closeModal}
+          modal={modal}
         />
         <br/>
         <Footer/>
