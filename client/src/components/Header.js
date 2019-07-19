@@ -9,13 +9,11 @@ class Header extends React.Component {
   render() {
     return (
       <div className="header">
-        <h1>
-          nyFree
-          <span className="give">&nbsp;....hey New York, give it away!</span>
-        </h1>
-        <div className="form">
-          <CreatePost onNewPostCreated = {this.props.onNewPostCreated} />
-        </div>
+          <h1>nyFree</h1>
+          <CreatePost
+            onNewPostCreated = {this.props.onNewPostCreated}
+            className = "createComponent"
+          />
       </div>
     );
   }
