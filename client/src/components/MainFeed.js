@@ -16,8 +16,10 @@ class MainFeed extends Component {
                 <p className="description">{post.description}</p>
                 <a href="#" className="contact">{post.contact}</a>
                 <br/>
-                <button className="delete" id={post.id} onClick={this.props.deletePost}>delete</button>
-                <button className="edit" id={post.id}>edit</button>
+                <div>
+                  <button className="delete" id={post.id} onClick={this.props.deletePost}>delete</button>
+                  <button className="edit" id={post.id}>edit</button>
+                </div>
             </div>
       );
     });

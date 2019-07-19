@@ -1,7 +1,6 @@
 /* Mobile Styles */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
   .header{
-    border: dotted blue;
     background-image:linear-gradient(to bottom right, darkgreen, #0EE67D);
     height:20vh;
     display:flex;
@@ -16,6 +15,21 @@
     color: white;
     font-family: Shrikhand;
     font-size:3.25em;
+  }
+
+  h2{
+    color: darkgrey;
+    font-family: Shrikhand;
+  }
+
+  p{
+
+    font-family: 'Quicksand', sans-serif;
+    color: darkgrey;
+    text-align: center;
+    padding-left:7.5%;
+    padding-right:7.5%;
+
   }
 
   form{
@@ -39,14 +53,48 @@
     font-size:.75em;
     border-radius:0;
     font-family: Shrikhand;
-
-
+  }
+   h5{
+    color: darkgreen;
+    font-size:.65em;
+    text-align: center;
   }
 
+  a{
+    color: darkgreen;
+    font-size:.65em;
+    /* text-align: center; */
+  }
+
+  .post{
+    height:50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+	  -moz-box-shadow: 0 8px 6px -6px black;
+	  box-shadow: 0 8px 6px -6px black;
+    padding-top: 7.5%;
+    padding-bottom: 7.5%;
+  }
+
+  .delete{
+    font-size:.75em;
+    border-radius:0;
+    font-family: Shrikhand;
+    color: darkgreen;
+  }
+
+  .edit{
+    font-size:.75em;
+    border-radius:0;
+    font-family: Shrikhand;
+    color: darkgreen;
+  }
 }
 
 /* Tablet Styles */
-@media only screen and (min-width: 401px) and (max-width: 960px) {
+@media only screen and (min-width: 500px) and (max-width: 960px) {
   body {
     background-color: #F5CF8E; /* Yellow */
   }

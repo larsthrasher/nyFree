@@ -46,7 +46,14 @@ class App extends Component {
     return (
       <div>
         <Header onNewPostCreated={this.getData}/>
-        <MainFeed className="mainFeed" posts={posts} apiLoaded={apiLoaded} deletePost={this.deletePost}/>
+        <br/>
+        <MainFeed
+          className="mainFeed"
+          posts={posts}
+          apiLoaded={apiLoaded}
+          deletePost={this.deletePost}
+        />
+        <br/>
         <Footer/>
       </div>
     )
