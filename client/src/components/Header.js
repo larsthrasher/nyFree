@@ -3,9 +3,6 @@ import CreatePost from "./CreatePost.js";
 import "../App.css";
 
 class Header extends React.Component {
-  constructor(props){
-    super(props);
-  }
   render() {
     return (
       <div className="header">

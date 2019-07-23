@@ -43,15 +43,13 @@ class App extends Component {
     this.setState({modal:false})
   }
 
+
+
   render() {
     const {
       posts,
       apiLoaded,
-      modal,
-      contactText,
-      titleText,
-      imageText,
-      descriptionText,
+      modal
     } = this.state;
     return (
       <div>
@@ -64,6 +62,7 @@ class App extends Component {
           showModal={this.showModal}
           closeModal={this.closeModal}
           modal={modal}
+          editPost={this.editPost}
         />
         <br/>
         <Footer/>

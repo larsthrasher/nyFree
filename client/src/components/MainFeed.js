@@ -4,9 +4,6 @@ import EditModal from "./EditModal.js"
 
 
 class MainFeed extends Component {
-  constructor(props){
-    super(props);
-  }
 
   mainFeed(){
     return this.props.posts.map(post => {
@@ -15,7 +12,7 @@ class MainFeed extends Component {
                 <h2 className="title">{post.title}</h2>
                 <img alt={`Something for donation ${post.id}`} className="image" src={post.image} width="25%"/>
                 <p className="description">{post.description}</p>
-                <a href="#" className="contact">{post.contact}</a>
+                <a href="{post.contact}" className="contact">{post.contact}</a>
                 <br/>
                 <div>
                   <button className="delete" id={post.id} onClick={this.props.deletePost}>delete</button>
@@ -31,7 +28,10 @@ class MainFeed extends Component {
     return (
       <div className="mainFeed">
         {this.props.apiLoaded ? this.mainFeed() : <p>Loading...</p>}
-        {this.props.modal ? <EditModal closeModal={this.props.closeModal}/> : null}
+        {this.props.modal ? <EditModal
+                              closeModal={this.props.closeModal}
+                              editPost={this.props.editPost}
+                              /> : null}
       </div>
     );
   }
